@@ -19,7 +19,10 @@
         <li><a href="#about">About</a></li>
         <li><a href="https://github.com/Rajsharma27?tab=repositories">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact" title="sharmaraj.sm@gmail.com">Contact</a></li>
+        <li class="nav-contact">
+          <a href="mailto:sharmaraj.sm@gmail.com" aria-describedby="contact-tooltip">Contact</a>
+          <div id="contact-tooltip" class="contact-tooltip" role="tooltip">sharmaraj.sm@gmail.com</div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -29,90 +32,129 @@
     <div class="intro-content">
       <div class="intro-text">
         <h2>Hi, I'm <span>Raj Sharma</span></h2>
-        <p>A passionate AI/ML developer who builds web experiences with clean code and creativity.</p>
+        <p>Building clean, scalable web platforms enhanced by machine learning algorithms.</p>
       </div>
       <div class="photo">
         <img src="WhatsApp Image 2025-04-07 at 21.55.37_2771c235.jpg" alt="photo" width="300" height="300">
       </div>
     </div>
   </section>
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-
-      <!-- Project 1 -->
-      <div class="project-card">
-        <h3>Stock Price Prediction</h3>
-        <p>Implemented LSTM neural networks to forecast stock prices using time series analysis and historical data.</p>
-        <a href="https://github.com/Rajsharma27/Real-Time-Stock-Price-Prediction" target="_blank">View on GitHub</a>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>Stock Price Prediction</h3>
+      <p>Implemented LSTM neural networks to forecast stock prices using time series analysis and historical data.</p>
+      <div class="project-meta">
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">LSTM</span>
+          <span class="badge">TensorFlow</span>
+          <span class="badge">Time  Series Analysis</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn ghost" href="https://github.com/Rajsharma27/Real-Time-Stock-Price-Prediction" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <h3>Movie Recommender System</h3>
-        <p>Built a collaborative filtering and content-based movie recommender using Python and Scikit-Learn.</p>
-        <a href="https://github.com/Rajsharma27/Movie-Recommender-System-Project" target="_blank">View on GitHub</a>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <h3>Brain Tumor Detection</h3>
-        <p>Developed a CNN model to classify brain MRI images for tumor detection with high accuracy.</p>
-        <a href="https://github.com/Rajsharma27/Brain-Tumor-Detection-Using-VGG-16" target="_blank">View on GitHub</a>
-      </div>
-
-      <!-- Project 4 (New) -->
-      <div class="project-card">
-        <h3>DocBot</h3>
-        <p>A RAG-based intelligent chatbot that enables users to interact with their PDF documents through natural language queries.</p>
-        <a href="https://github.com/Rajsharma27/DocBot" target="_blank">View on GitHub</a>
-      </div>
-
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-box">
-
-      <div class="skills-category">
-        <h3>Languages</h3>
-        <span>Python</span>
-        <span>C++</span>
-        <span>HTML</span>
-        <span>CSS</span>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Movie Recommender System</h3>
+      <p>Built a collaborative filtering and content-based movie recommender using Python and Scikit-Learn.</p>
+      <div class="project-meta">
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Scikit-Learn</span>
+          <span class="badge">Content Based Filtering</span>
+          <span class="badge">Data Science</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn ghost" href="https://github.com/Rajsharma27/Movie-Recommender-System-Project" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
-
-      <div class="skills-category">
-        <h3>Frameworks & Libraries</h3>
-        <span>TensorFlow</span>
-        <span>Scikit-Learn</span>
-        <span>Flask</span>
-        <span>FastAPI</span>
-        <span>LangChain</span>
-      </div>
-
-      <div class="skills-category">
-        <h3>Tools & Platforms</h3>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>VS Code</span>
-        <span>Jupyter</span>
-      </div>
-
-      <div class="skills-category">
-        <h3>Other</h3>
-        <span>Machine Learning</span>
-        <span>Deep Learning</span>
-        <span>Data Analysis</span>
-        <span>Problem Solving</span>
-      </div>
-
     </div>
-  </section>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h3>Brain Tumor Detection</h3>
+      <p>Developed a CNN model to classify brain MRI images for tumor detection with high accuracy.</p>
+      <div class="project-meta">
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">CNN</span>
+          <span class="badge">Keras</span>
+          <span class="badge">Medical Imaging</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn ghost" href="https://github.com/Rajsharma27/Brain-Tumor-Detection-Using-VGG-16" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 (DocBot) -->
+    <div class="project-card project-docbot">
+      <h3>DocBot — Conversational PDF Assistant</h3>
+      <p>DocBot lets users talk to their PDFs. Upload a document, ask natural-language questions, and get precise answers with highlighted sources. Built with PDF parsing, embeddings, and a chat interface.</p>
+      <div class="project-meta">
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">LangChain</span>
+          <span class="badge">OpenAI</span>
+          <span class="badge">Flask</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn ghost" href="https://github.com/Rajsharma27/DocBot" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-box">
+
+    <div class="skills-category">
+      <h3>Languages</h3>
+      <span>Python</span>
+      <span>C</span>
+      <span>C++</span>
+      <span>HTML</span>
+      <span>CSS</span>
+    </div>
+
+    <div class="skills-category">
+      <h3>Frameworks & Libraries</h3>
+      <span>TensorFlow</span>
+      <span>Scikit-Learn</span>
+      <span>Flask</span>
+      <span>FastAPI</span>
+      <span>LangChain</span>
+      <span>Pytorch</span>
+    </div>
+
+    <div class="skills-category">
+      <h3>Tools & Platforms</h3>
+      <span>Git</span>
+      <span>GitHub</span>
+      <span>VS Code</span>
+      <span>Docker</span>
+      <span>HuggingFace</span>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
 
   <!-- Particle.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -124,7 +166,3 @@
 
 </body>
 </html>
-
-
-
-
