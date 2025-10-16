@@ -12,6 +12,42 @@ html {
     scroll-behavior: smooth;
 }
 
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* position above */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+<li class="tooltip">
+  <a href="#contact">Contact</a>
+  <span class="tooltip-text">sharmaraj.sm@gmail.com</span>
+</li>
+
+
 /* Particle background layer */
 #particles-js {
     position: fixed;
@@ -307,3 +343,4 @@ html {
         padding: 1.5rem 1rem;
     }
 }
+
