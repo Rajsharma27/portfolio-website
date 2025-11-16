@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio - About Me</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="background/style.css" />
 </head>
 <body>
 
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
+  <canvas class="background-canvas"></canvas>
 
   <!-- Navbar -->
   <nav class="navbar">
@@ -17,7 +17,7 @@
       <div class="logo">Raj Sharma</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#Projects">Projects</a></li>
+        <li><a href="https://github.com/Rajsharma27?tab=repositories">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li class="nav-contact">
           <a href="mailto:sharmaraj.sm@gmail.com" aria-describedby="contact-tooltip">Contact</a>
@@ -104,7 +104,7 @@
           <span class="badge">Python</span>
           <span class="badge">LangChain</span>
           <span class="badge">OpenAI</span>
-          <span class="badge">Flask</span>
+          <span class="badge">Streamlit</span>
         </div>
         <div class="project-actions">
           <a class="btn ghost" href="https://github.com/Rajsharma27/DocBot" target="_blank" rel="noopener noreferrer">View on GitHub</a>
@@ -156,14 +156,7 @@
 
 
 
-  <!-- Particle.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS.load('particles-js', 'particles.json', function () {
-      console.log('Particles.js loaded');
-    });
-  </script>
+  <script src="background/style.js" defer></script>
 
 </body>
 </html>
-
