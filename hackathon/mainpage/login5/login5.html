@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Login Portal</title>
+    <link rel="stylesheet" href="/mainpage/login5/login5.css">
+</head>
+<body>
+    <div class="container">
+       
+        <header>
+            <h1>Welcome to the Government Services Portal</h1>
+            <p>Access public services and information quickly and securely.</p>
+        </header>
+
+       
+        <div class="form-container" id="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+
+                
+                <div class="captcha">
+                    <span id="captchaText">5 + 3 = ?</span>
+                    <input type="text" id="captchaInput" placeholder="Captcha" required>
+                </div>
+
+                <button type="button" onclick="validateCaptcha()">Submit CAPTCHA</button>
+
+              
+                <div id="otpSection" class="hidden">
+                    <p>An OTP has been sent to your email. Please enter it below to complete login.</p>
+                    <input type="text" id="otpInput" placeholder="Enter OTP" required>
+                    <input type="hidden" id="generatedOtp">
+                    <button type="button" onclick="verifyOtp()">Verify OTP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

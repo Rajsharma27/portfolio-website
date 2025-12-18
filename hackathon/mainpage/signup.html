@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up with OTP</title>
+    <link rel="stylesheet" href="/mainpage/signup.css">
+</head>
+<body>
+    <div class="container">
+       
+        <div class="form-container" id="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="signupUsername" placeholder="Username" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+                
+               
+                <div id="otpSection" class="hidden">
+                    <p>An OTP has been sent to your email. Please enter it below to complete your sign-up.</p>
+                    <input type="text" id="otpInput" placeholder="Enter OTP" required>
+                    <input type="hidden" id="generatedOtp">
+                    <button type="button" onclick="verifyOtp()">Verify OTP</button>
+                </div>
+
+                <button type="button" onclick="sendOtp()">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

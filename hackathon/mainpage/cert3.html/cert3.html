@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Certificates</title>
+    <link rel="stylesheet" href="cert3.css">
+    <style>
+      
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        #certificateForm{
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .card {
+            background-color: #f0f8ff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .button button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button button:hover {
+            background-color: #45a049;
+        }
+
+       
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .modal-content h3 {
+            margin-bottom: 10px;
+        }
+        .modal-content ul, .modal-content form {
+            list-style-type: none;
+            padding: 0;
+        }
+        .modal-content li, .modal-content label {
+            text-align: left;
+            padding: 5px 0;
+        }
+        .close-btn, .next-btn, .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .close-btn:hover {
+            background-color: #c9302c;
+        }
+        .next-btn:hover, .submit-btn:hover {
+            background-color: #45a049;
+        }
+   
+        .confirmation {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h3 class="title">Caste Certificate</h3>
+            <p class="content">Apply for your caste certificate.</p>
+            <div class="button"><button onclick="showDocuments('Caste Certificate')">Apply now</button></div>
+        </div>
+        <div class="card">
+            <h3 class="title">Domicile Certificate</h3>
+            <p class="content">Apply for your domicile certificate.</p>
+            <div class="button"><button onclick="showDocuments('Domicile Certificate')">Apply now</button></div>
+        </div>
+        <div class="card">
+            <h3 class="title">Birth Certificate</h3>
+            <p class="content">Get your birth certificate issued.</p>
+            <div class="button"><button onclick="showDocuments('Birth Certificate')">Apply now</button></div>
+        </div>
+        <div class="card">
+            <h3 class="title">Residence Certificate</h3>
+            <p class="content">Apply for a residence certificate.</p>
+            <div class="button"><button onclick="showDocuments('Residence Certificate')">Apply now</button></div>
+        </div>
+        <div class="card">
+            <h3 class="title">Marriage Certificate</h3>
+            <p class="content">Register your marriage certificate.</p>
+            <div class="button"><button onclick="showDocuments('Marriage Certificate')">Apply now</button></div>
+        </div>
+        <div class="card">
+            <h3 class="title">Senior Citizen Card</h3>
+            <p class="content">Apply for a Senior CitizenCard.</p>
+            <div class="button"><button onclick="showDocuments('Senior Citizen Card')">Apply now</button></div>
+        </div>
+        <div class="card">
+            <h3 class="title">EWS Certificate</h3>
+            <p class="content">Apply for a EWS certificate.</p>
+            <div class="button"><button onclick="showDocuments('EWS Certificate')">Apply now</button></div>
+             
+        </div>
+        <div class="card">
+            <h3 class="title">E-Shram Card</h3>
+            <p class="content">Apply for a E-Shram Card.</p>
+            <div class="button"><button onclick="showDocuments('E-Shram Card')">Apply now</button></div>
+    </div>
+       
+    </div>
+
+    
+    <div id="documentModal" class="modal">
+        <div class="modal-content">
+            <h3 id="certificateType"></h3>
+            <div id="requirements">
+                <p>The following documents are required:</p>
+                <ul>
+                    <li>Income Proof</li>
+                    <li>ID Proof</li>
+                    <li>Photograph</li>
+                    <li>Address Proof</li>
+                </ul>
+                <button class="next-btn" onclick="showForm()">Next</button>
+            </div>
+            <div id="applicationForm" style="display: none;">
+                <form id="certificateForm" onsubmit="submitForm(event)">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" name="fatherName" required><br>
+                    <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" required><br>
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" id="nationality" name="nationality" required><br>
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required><br>
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district" required><br>
+                    <label for="village">Village:</label>
+                    <input type="text" id="village" name="village"><br>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+            <div id="confirmationMessage" class="confirmation" style="display: none;">
+                <p>Application submitted successfully!</p>
+                <p>Your Certificate ID is: <span id="certificateID"></span></p>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showDocuments(certificateType) {
+            document.getElementById('certificateType').textContent = certificateType;
+            document.getElementById('requirements').style.display = 'block';
+            document.getElementById('applicationForm').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'none';
+            document.getElementById('documentModal').style.display = 'block';
+        }
+
+        function showForm() {
+            document.getElementById('requirements').style.display = 'none';
+            document.getElementById('applicationForm').style.display = 'block';
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); 
+
+            
+            const certificateID = "CERT" + Math.floor(Math.random() * 1000000);
+            
+            
+            document.getElementById('applicationForm').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'block';
+            document.getElementById('certificateID').textContent = certificateID;
+        }
+
+        function closeModal() {
+            document.getElementById('documentModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('documentModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
