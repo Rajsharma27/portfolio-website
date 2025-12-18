@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+{
+  "particles": {
+    "number": {
+      "value": 70,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "size": {
+      "value": 2.5
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.6
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  },
+  "retina_detect": true
+}
+=======
+{
+  "particles": {
+    "number": {
+      "value": 70,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "size": {
+      "value": 2.5
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.6
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  },
+  "retina_detect": true
+}
+>>>>>>> ee1ebb5282e5f9e9cfb939dae454f4ffcb98cd17
